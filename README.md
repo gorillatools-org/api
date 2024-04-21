@@ -9,6 +9,9 @@ Params:
 In Url: ?devSecretKey=
 Type: string
 
+Example URL:
+https://api.gorilla-tools.org/GetKeyInfo.php?devSecretKey=QYE3JX4RAOWHCX9ZUR7K78T3GR3NPPZN35AHBEXY8ZGM8WS3IM
+
 Example Response:
 ```json
 {

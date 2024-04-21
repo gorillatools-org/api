@@ -1,6 +1,8 @@
 # how to use?
 
 
+FYI, Average Load Times are 5-10 seconds. Bad internet takes longer, obviously
+
 ## GetKeyInfo.php
 
 Method: GET

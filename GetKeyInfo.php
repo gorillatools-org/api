@@ -173,10 +173,9 @@ class KeyInfo {
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $devSecretKey = filter_input(INPUT_GET, 'devSecretKey', FILTER_SANITIZE_STRING);
-    $segmentName = filter_input(INPUT_GET, 'segmentName', FILTER_SANITIZE_STRING);
 
-    if (empty($devSecretKey) || empty($segmentName)) {
-        die("both devSecretKey and segmentName are required.");
+    if (empty($devSecretKey)) {
+        die("devSecretKey param is required. see <a href=https://github.com/gorillatools-org/api/blob/main/GetKeyInfo.php>the source on github</a>");
     } else {
         $keyInfo = new KeyInfo($devSecretKey);
         if ($keyInfo->isKeyValid()) {

@@ -29,7 +29,6 @@ class KeyInfo {
                     return false;
                 } else if ($d->error == "DAULimitExceeded" && $d->errorCode == 1129) {
                     die("DAULimitExceeded");
-                    return false;
                 } elseif ($d != null && $d->errorCode == 1131 && !empty($d->errorMessage)) {
                     $p = explode("https://", $d->errorMessage);
                     if (count($p) >= 2) {
@@ -45,7 +44,6 @@ class KeyInfo {
             }
         } catch (Exception $ex) {
             die($ex->getMessage()); // you MUst debug this urself!! :-)
-            return false;
         }
 
         return false;

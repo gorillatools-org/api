@@ -33,8 +33,8 @@ class KeyInfo {
                 } elseif ($d != null && $d->errorCode == 1131 && !empty($d->errorMessage)) {
                     $p = explode("https://", $d->errorMessage);
                     if (count($p) >= 2) {
-                        $sp = explode(".api.main.azureplayfab.com", $p[1]);
-                        if (count($sp) >= 2 && preg_match("/^\w{5,6}$/", $sp[0])) {
+                        $sp = explode(".api.mainp.azureplayfab.com", $p[1]);
+                        if (count($sp) >= 2 && preg_match("/^\w{4,6}$/", $sp[0])) {
                             $this->setTitleId($sp[0]);
                             return true;
                         }
